@@ -1,7 +1,22 @@
+
+
+
+
+
+
 # Can of Books
 
 **Author**: Michelle Salazar, Anthony Hilll
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+
+
+[Trello Board](https://trello.com/b/iFJ6aU7C/mish-and-ant)<br>
+[Netlify live link](https://lambent-buttercream-e1634b.netlify.app/)<br>
+[Heroku link](https://git.heroku.com/can-of-books-b-e.git)<br>
+[Github](https://github.com/M-A-BookApp)
+
+
+
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
@@ -31,27 +46,26 @@
 
  ### Logistical
 
-What hours will you be available to communicate? 3pm to 9pm EST for Anthony, 12pm to 6pm PST For Michelle.
-What platform will you use to communicate (ie. Slack, phone …)? Slack for both
-How often will you take breaks? As needed.
-What is your plan if you start to fall behind? Ask for Help
+What hours will you be available to communicate? 3pm to 9pm EST for Anthony, 12pm to 6pm PST For Michelle.   
+What platform will you use to communicate (ie. Slack, phone …)? Slack for both   
+How often will you take breaks? As needed.   
+What is your plan if you start to fall behind? Ask for Help   
 
 ### Cooperative
 
 Make a list of each parson’s strengths.
 Anthony's List
 <li>
-Tenancity
-Stubborness
-Adaptability
-</li>
+Tenancity</li><li>
+Stubborness</li><li>
+Adaptability</li><br>
 
 Michelle's List
 <li>
-Orgazinational Skills
-Time Managment
-Attention To Detail
-</li>
+Orgazinational Skills</li><li>
+Time Managment</li><li>
+Attention To Detail</li>
+
 
 
 
