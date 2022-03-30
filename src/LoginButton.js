@@ -9,14 +9,20 @@ export default class LoginButton extends Component {
       showButton: true
     }
   }
-handleClick = () => {
-  this.setState({showButton: false})
-}
+  handleClick = () => {
+    this.setState({ showButton: false })
+  }
   render() {
-    return (
-    <>
-      {this.state.showButton ? <Button onClick={this.handleClick}>Login</Button> : <LoginForm loginHandler={this.props.loginHandler}/>}
-      </>
-    );
+    if (this.state.showButton) {
+
+      return <Button onClick={this.handleClick}> Login Please</Button>
+
+    } else {
+      return <LoginForm loginHandler={this.props.loginHandler} />
+
+    }
+
+
+
   }
 };

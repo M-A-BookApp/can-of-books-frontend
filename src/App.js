@@ -11,6 +11,7 @@ import BestBooks from "./BestBooks.js"
 import Login from './Login.js';
 import Profile from './Profile.js';
 import LoginButton from './LoginButton.js';
+import LoginForm from './LoginForm';
 
 class App extends React.Component {
 
@@ -20,6 +21,9 @@ class App extends React.Component {
       user: null,
     }
   }
+
+
+
 
   loginHandler = (user) => {
     this.setState({
@@ -40,8 +44,9 @@ class App extends React.Component {
           <Header user={this.state.user} onLogout={this.logoutHandler} />
           <Switch>
             <Route exact path="/">
+ { this.state.user ?  <BestBooks/> : <Login loginHandler={this.loginHandler } />}
               {/* TODO: if the user is logged in, render the `BestBooks` component, if they are not, render the `Login` component */}
-              <BestBooks/>
+  
             </Route>
             {/* TODO: add a route with a path of '/profile' that renders a `Profile` component */}
           </Switch>
