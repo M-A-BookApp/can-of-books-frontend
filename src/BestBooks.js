@@ -19,15 +19,15 @@ class BestBooks extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-
+    console.log('handleSubmit')
     const bookMaker = {
       title: e.target.title.value,
       description: e.target.description.value,
-      read: e.target.read.value,
+      status: e.target.status.checked,
       email: e.target.email.value,
     };
     console.log(bookMaker);
-    this.makeBook(bookMaker);
+    this.postBook(bookMaker);
     // e.target.reset()
   };
 
@@ -57,7 +57,7 @@ class BestBooks extends React.Component {
   deleteBook = async (id) => {
     console.log('id in deleteBook: ', id)
     try {
-      await axios.delete(`${process.env.REACT_APP_LOCALHOST}/books/${id}?email=${this.props.user.email}`);
+      await axios.delete(`${process.env.REACT_APP_LOCALHOST}/books/${id}`);
 
       const updatedBooks = this.state.books.filter(book => book._id !== id);
       this.setState({ books: updatedBooks });
@@ -81,7 +81,7 @@ class BestBooks extends React.Component {
     // this.setState({showUpdateModal: true})
 
     try {
-      const updateBook = await axios.put(`${process.env.REACT_APP_LOCALHOST}/books/${id}${updatedBook}`);
+      const updateBook = await axios.put(`${process.env.REACT_APP_LOCALHOST}/books/${book._id}`);
       // const updateBook = await axios.put(`${process.env.REACT_APP_LOCALHOST}/books/${updatedBook}`);
       const newBookState = this.state.books.map(book => {
         if (book._id === id) {
@@ -110,7 +110,7 @@ class BestBooks extends React.Component {
           <p>Sorry, there are no books in this collection</p>
         )}
         {this.state.showModal ? (
-          <BookFormModal showModal={this.state.showModal} onClick={this.handleClick} closeModal={this.closeModal} postBook={this.postBook} />
+          <BookFormModal showModal={this.state.showModal} onClick={this.handleClick} closeModal={this.closeModal} postBook={this.postBook} handleSubmit={this.handleSubmit} />
         ) : (
           <Button onClick={this.handleClick}>Add a book</Button>
         )}

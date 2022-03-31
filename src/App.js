@@ -12,6 +12,7 @@ import Login from './Login.js';
 import Profile from './Profile.js';
 import LoginButton from './LoginButton.js';
 import LoginForm from './LoginForm';
+import LogoutButton from './LogoutButton.js';
 
 class App extends React.Component {
 
