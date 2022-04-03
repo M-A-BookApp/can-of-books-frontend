@@ -1,5 +1,6 @@
-import { Component } from "react";
-import { withAuth0 } from "@auth0/auth0-react";
+import React from 'react';
+import { Component } from 'react';
+import { withAuth0 } from '@auth0/auth0-react';
 import Button from 'react-bootstrap/Button';
 
 class LogoutButton extends Component {
@@ -7,7 +8,7 @@ class LogoutButton extends Component {
 
     return (
       <Button variant="success" onClick={this.props.auth0.logout}>Log Out</Button>
-    )
+    );
   }
 }
 
