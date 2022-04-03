@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { Button } from "react-bootstrap";
-import UpdateModal from "./UpdateModal";
+import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
+import UpdateModal from './UpdateModal';
 
 export default class BookInfo extends Component {
   constructor(props) {
@@ -19,35 +19,33 @@ export default class BookInfo extends Component {
   }
 
   render() {
-    
     return (
       <div>
         <div id="book-info">
           <p>{this.props.book.title}</p>
           <p>{this.props.book.description}</p>
         </div>
-
-        <Button 
-          onClick={() => this.props.deleteBook(this.props.book._id)} 
+        <Button
+          onClick={() => this.props.deleteBook(this.props.book._id)}
           variant='danger'
         >
           Delete
         </Button>
 
         {this.state.showUpdateModal ? (
-           <UpdateModal 
+          <UpdateModal
             book={this.props.book}
             closeModal={this.closeModal}
             updateBook={this.props.updateBook}
           />
         ) : (
-          <Button 
+          <Button
             onClick={this.handleUpdateButtonClick}
             variant='primary'
           >
             Update
           </Button>
-        )} 
+        )}
       </div>
     );
   }

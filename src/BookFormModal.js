@@ -1,7 +1,6 @@
-es (47 sloc)  1.66 KB
-   
-import React, { Component } from "react";
-import { Button, Container, Form, Modal } from "react-bootstrap";
+import React from 'react';
+import { Component } from 'react';
+import { Button, Container, Form, Modal } from 'react-bootstrap';
 
 export default class BookFormModal extends Component {
   handleSubmit = (e) => {

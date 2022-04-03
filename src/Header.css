@@ -1,7 +1,9 @@
 a{
-  color:#fff;
+  font-weight: bolder;
+  color:rgb(6, 71, 99);
 }
 
 a:hover{
-  color:darkgrey;
+  color:rgb(21, 194, 213);
+  font-weight: bolder;
 }

@@ -1,17 +1,18 @@
-import React, { Component } from 'react'
-import { Modal,Container,Form,Button } from 'react-bootstrap';
+import React from 'react';
+import { Component } from 'react';
+import { Modal, Container, Form, Button } from 'react-bootstrap';
 
 export default class UpdateModal extends Component {
 
   closeModal = () => {
-    this.props.closeModal()
+    this.props.closeModal();
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log('old title: ', this.props.book.title)
-    console.log('old desc: ', this.props.book.description)
-    console.log('old status: ', this.props.book.status)
+    console.log('old title: ', this.props.book.title);
+    console.log('old desc: ', this.props.book.description);
+    console.log('old status: ', this.props.book.status);
 
     const updatedBook = {
       title: e.target.title.value || this.props.book.title,
